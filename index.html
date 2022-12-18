@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Colin Robinson-IMD CA2</title>
+	
+	<!-- Link to Bootstrap Stylesheet-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+	<!-- Link to My Stylesheet-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Link to JS Boostrap-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-main">
+  
+	<!-- Navigation -->
+	<nav id="navbar-main" class="navbar navbar-dark bg-black px-3 fixed-top">
+		<div class="container-fluid">
+			<a id="homeName" class="navbar-brand logo-text" href="#home">Colin Robinson</a>
+			
+			<ul class="nav nav-pills ms-auto">  
+				<li class="nav-item">
+					<a class="nav-link" href="#aboutMe">About Me</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#skills">Skills</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#education">Education</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#experience">Experience</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact Information</a>
+				</li>
+			</ul>
+		</div> <!-- End of class container fluid-->
+	</nav>
+  
+
+	<!-- Content for each page is below-->
+	<div data-spy="scroll" data-target="#navbar-main" data-offset="0">
+		<main>
+			<!-- Home page -->
+			<section id="home" class="topics">
+				<div class="container text-center">
+					<div class="row justify-content-center">
+						<div class="col-md-10">
+							<h1 class="text-white display-4">Colin Robinson</h1>
+							<p class="text-white">Hello, My name is Colin, I am a 4th year Computing student.</p>
+							<h4 onclick="showWelcome(event);">ME</h4>
+							<h6 href="#contact" class="btn btn-brand">Contact</h6>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="welcomeModal" >
+					<div class="modal-dialog modal-dialog-centered modal-md">  
+						<div class="modal-content">
+							<div class="modal-header">
+								<p id="modalTitle">Hello and welcome</p>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<img class="img-fluid rounded" src="images/me2.png" class="modal-img" alt="Modal Image">
+								<p>I am Colin Robinson, as previously mentioned I am a Computing student, currently studying at the Technological University of Dublin or TUD for short, I am in the Computing with Artificial Intelligence Machine Learning stream with the aim of getting my degree in Summer 2023.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br>
+			<br>
+
+			<!-- About Me page -->
+			<section id="aboutMe" class="topics">
+				<h1>About Me</h1>
+					 
+				<div class="row">
+					<div class="col-4">
+						<img class="float-start img-fluid rounded me-2" src="images/me2.png" width="600" height="400" alt="Gym family"/>
+					</div>
+		  
+					<div class="col-8" id="aboutMeTextbox">
+						<div class="row">
+							<p>I gained my love of computing through games, I learned about the development process when I was younger and I was fascinated by the technology involved, 
+							the main areas of game development were story, art and computing, since my story skills are average and my art skills evoke tears of despair, I started looking into computing,
+							as the years went by and I grew up, the interest evolved from computing with regards games towards computing in general in fact the only thing i have been sure of
+							in my life is that I want to work with computers. 
+							</p>
+						</div>
+						
+						<div class="row">
+							<p> Below are the main Hobbies I have</p>
+						</div>
+						<div id="aboutUsAwards" class="row py-4 justify-content-center">
+							<div class="col-3">
+								<p> Gaming</p>
+								<img src="images/hobby1.jpg" width="150" height="132"  alt="hobby1" onclick="showGame(event);">
+							</div>
+							<div class="modal fade" id="gameModal" >
+								<div class="modal-dialog modal-dialog-centered modal-md">  
+									<div class="modal-content">
+										<div class="modal-header">
+											<p><b>Hobby Information</b></p>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<img src="images/hobby1.jpg" class="modal-img img-responsive" width="150" height="132" alt="Modal Image">
+											<p>Theres nothing I love more than a good game my preferences are strategy games like Total war or GOOD story games like Mass Effect 1-3.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<p> Reading</p>
+								<img src="images/hobby2.jpg" width="150" height="132"  alt="hobby1" onclick="showRead(event);">
+							</div>
+							<div class="modal fade" id="readModal" >
+								<div class="modal-dialog modal-dialog-centered modal-md">  
+									<div class="modal-content">
+										<div class="modal-header">
+											<p><b>Hobby Information</b></p>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<img src="images/hobby2.jpg" class="modal-img img-responsive" width="150" height="132" alt="Modal Image">
+											<p>I love to read a good story from adventure to superheoes, to political and fantasy, a good story can make me disappear into a comfortable char for a day or two</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<p> TV</p>
+								<img src="images/hobby3.jpg" width="150" height="132"  alt="hobby1" onclick="showTV(event);">
+							</div>
+							<div class="modal fade" id="tvModal" >
+								<div class="modal-dialog modal-dialog-centered modal-md">  
+									<div class="modal-content">
+										<div class="modal-header">
+											<p><b>Hobby Information</b></p>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<img src="images/hobby3.jpg" class="modal-img img-responsive" width="150" height="132" alt="Modal Image">
+											<p>There is nothing like binging a good tv show, whether it be crime, fantasy it doesn't really matter as long as its got a good story and a lot of episodes</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div> <!-- close of col-->
+				</div> <!-- close of row-->
+				<br><br>
+			</section>
+			<br>
+			<br>
+
+			<section id="skills" class="topics">
+				<h1>Skills</h1>
+				<div class="row">
+					<div class="col-4">
+						<img class="float-start img-fluid rounded me-2" src="images/skills.jpg" width="600" height="400" alt="Gym family"/>
+					</div>
+		  
+					<div class="col-8" id="skillsTextbox">
+						<div class="row">
+							<p>Over the years I have gathered alot of experience in both college and life with in numerous ares such as app development, coding languages, team skills and others.
+								These skills have been gained either through study, constant use or general osmosis. While i would hesitate to call myself a specialist in any area I would say that
+								I have seen a little of everything. So while I don't have a deep level of knowledge in one area I have at least had a go at almost everything.  
+							</p>
+						</div>
+						<br>
+						<br>
+						<br>
+						<br>
+						<div class="row">
+							<p> Below are a list of my skills</p>
+						</div>
+						<select id="gallerySelect" class="form-select" aria-label="Default select example" onchange="showSkills()" style="max-width: 20em;">
+							<option selected>Select Category</option>
+							<option value="1">All</option>
+							<option value="2">Coding Languages</option>
+							<option value="3">Team skills</option>
+							<option value="4">Life skills</option>
+						</select>
+					</div> <!-- close of col-->
+					<div class="container">
+						<div class="row mp-3 p-3" id="CodingLanguages">
+							<h5>Coding Languages</h5>
+								<div class="row mp-3 p-3 mx-auto">
+									<div class="col-sm-3 mx-auto">
+										<div class="flip-card">
+											<div class="flip-card-inner">
+												<div class="flip-card-front">
+													<h4>Past knowledge</h4>
+													<img src="images/code1.jpg" alt="Avatar" style="width:300px;height:300px;">
+												</div>
+												<div class="flip-card-back">
+													<h3>Past knowledge</h3> 
+													<p>Languages that I used to use alot but not recently</p> 
+													<p>Java</p>
+													<p>XML</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3 mx-auto">
+										<div class="flip-card">										
+											<div class="flip-card-inner">
+												<div class="flip-card-front">
+													<h4>Passing knowledge</h4>
+													<img src="images/code2.jpg" alt="Avatar" style="width:300px;height:300px;">
+												</div>
+												<div class="flip-card-back">
+													<h3>Passing knowledge</h3> 
+													<p>Languages that I used in passing or in small amounts</p> 
+													<p>C#</p>
+													<p>C+</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3 mx-auto">
+										<div class="flip-card">										
+											<div class="flip-card-inner">
+												<div class="flip-card-front">
+													<h4>Knowledgeable</h4>
+													<img src="images/code3.png" alt="Avatar" style="width:300px;height:300px;">
+												</div>
+												<div class="flip-card-back">
+													<h3>Knowledgeable</h3> 
+													<p>Languages that I use regualarly</p> 
+													<p>Python</p>
+													<p>HTML & CSS</p>
+													<p>Javascript</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>						
+						</div>
+						<div class="row mp-3 p-3" id="TeamSkills">
+							<h5>Team Skills</h5>
+							<div class="row mp-3 p-3 mx-auto">
+								<div class="col-sm-3 mx-auto">
+									<div class="flip-card">
+										<div class="flip-card-inner">
+											<div class="flip-card-front">
+												<h4>Communicative</h4>
+												<img src="images/ts1.png" alt="Avatar" style="width:300px;height:300px;">
+											</div>
+											<div class="flip-card-back">
+												<h3>Communicative</h3> 
+												<p>I have a talent for metaphors and am skilled in translating
+													techno speak to non tech people.
+												</p> 
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 mx-auto">
+									<div class="flip-card">										
+										<div class="flip-card-inner">
+											<div class="flip-card-front">
+												<h4>Good Listener</h4>
+												<img src="images/ts2.jpg" alt="Avatar" style="width:300px;height:300px;">
+											</div>
+											<div class="flip-card-back">
+												<h3>Good Listener</h3> 
+												<p>I have know problem listening to others</p> 
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 mx-auto">
+									<div class="flip-card">										
+										<div class="flip-card-inner">
+											<div class="flip-card-front">
+												<h4>Reliable</h4>
+												<img src="images/ts3.png" alt="Avatar" style="width:300px;height:300px;">
+											</div>
+											<div class="flip-card-back">
+												<h3>Reliable</h3> 
+												<p>I have no problem working late or acknowledging that something is my fault</p> 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+						<div class="row mp-3 p-3" id="Lifeskills">
+							<h5>Life Skills</h5>
+							<div class="row mp-3 p-3 mx-auto">
+								<div class="col-sm-3 mx-auto">
+									<div class="flip-card">
+										<div class="flip-card-inner">
+											<div class="flip-card-front">
+												<h4>Tech Support</h4>
+												<img src="images/ls1.jpg" alt="Avatar" style="width:300px;height:300px;">
+											</div>
+											<div class="flip-card-back">
+												<h3>Tech Support</h3> 
+												<p>I am the resident IT person for my house and have gotten plenty of experience in the matter.
+												</p> 
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 mx-auto">
+									<div class="flip-card">										
+										<div class="flip-card-inner">
+											<div class="flip-card-front">
+												<h4>Friendly</h4>
+												<img src="images/ls2.jpeg" alt="Avatar" style="width:300px;height:300px;">
+											</div>
+											<div class="flip-card-back">
+												<h3>Friendly</h3> 
+												<p>I am always happy to meet new people</p> 
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 mx-auto">
+									<div class="flip-card">										
+										<div class="flip-card-inner">
+											<div class="flip-card-front">
+												<h4>Eager</h4>
+												<img src="images/ls3.jpg" alt="Avatar" style="width:300px;height:300px;">
+											</div>
+											<div class="flip-card-back">
+												<h3>Eager</h3> 
+												<p>I love to try new things</p> 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+				</div>
+			</section>
+			<br>
+			<br>
+
+			<section id="education" class="topics">
+				<h1>Education</h1>
+				<div class="row">
+					<div class="col-4">
+						<img class="float-start img-fluid rounded me-2" src="images/educ.jpg" width="600" height="400" alt="Gym family"/>
+					</div>
+		  
+					<div class="col-8" id="skillsTextbox">
+						<div class="row">
+							<p>For the last 4 years I have been studying computing in the Technological University of Dublin or TUD 
+								in the Tallght campus, the second and third years were particularly difficult due to the pandemic 
+								causing a switch to online learning, while it took awhile I was able to find my feet.
+							</p>
+							<br>
+							<p>
+								The return to college after covid has been even more difficult then the reverse, however just like with the 
+								switch to online learning halfway through first year the switch back has also been diffult yet manageable.
+							</p>
+						</div>
+						<br>
+						<br>
+					</div> <!-- close of col-->
+
+				</div>
+				<div class="row" id="TUD Results">
+					<p> Below are my grades from TUD</p>
+					<div class="container">
+						<div id="accordion">
+							<div class="card">
+								<div class="card-header">
+								  <a class="btn" data-bs-toggle="collapse" href="#YrFour">
+									Year 4 2022-2023 (Present Year)
+								  </a>
+								</div>
+								<div id="YrFour" class="collapse show" data-bs-parent="#accordion">
+									<div class="card-body">
+										<table class="table">
+										<tr>
+										<th class="text-black">Module</th>
+										<th class="text-black">Results</th>
+										</tr>
+										<tbody>	
+										<tr>
+											<td>Interactive Media Design & Visualisation</td>
+											<td>N/A</td>
+										</tr>
+										<tr>
+											<td>Applied Machine Learning</td>
+											<td>N/A</td>
+										</tr>
+										<tr>
+											<td>Social Media Analysis</td>
+											<td>N/A</td>
+										</tr>
+										<tr>
+											<td>DevOps - Continuous Integration and Deployment</td>
+											<td>N/A</td>
+										</tr>
+										<tr>
+											<td>Project</td>
+											<td>N/A</td>
+										</tr>
+										<tr>
+											<td>Information Management</td>
+											<td>N/A</td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header">
+								  <a class="btn" data-bs-toggle="collapse" href="#YrThree">
+									Year 3 2021-2022
+								  </a>
+								</div>
+								<div id="YrThree" class="collapse show" data-bs-parent="#accordion">
+									<div class="card-body">
+										<table class="table">
+										<tr>
+											<th class="text-black">Module</th>
+											<th class="text-black">Results</th>
+										</tr>
+										<tbody>
+										<tr>
+											<td>Server Side Web Development</td>
+											<td>C+</td>
+										</tr>
+										<tr>
+											<td>Operating Systems</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Cloud Service & Distributed Computing</td>
+											<td>C+</td>
+										</tr>
+										<tr>
+											<td>Big Data Technologies</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Data Analysis</td>
+											<td>B+</td>
+										</tr>
+										<tr>
+											<td>Advanced Routing & Switching</td>
+											<td>B-</td>
+										</tr>
+										<tr>
+											<td>Experimental Learning</td>
+											<td>Pass</td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header">
+								  <a class="btn" data-bs-toggle="collapse" href="#YrTwo">
+									Year 2 2020-2021
+								  </a>
+								</div>
+								<div id="YrTwo" class="collapse show" data-bs-parent="#accordion">
+									<div class="card-body">
+										<table class="table">
+										<tr>
+											<th class="text-black">Module</th>
+											<th class="text-black">Results</th>
+										</tr>
+										<tbody>
+										<tr>
+											<td>Routing & Switching Essentials</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Management Science</td>
+											<td>A</td>
+										</tr>
+										<tr>
+											<td>Database Admin & Analysis</td>
+											<td>B+</td>
+										</tr>
+										<tr>
+											<td>Information Security</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>IT Services Management</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Project</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Software Quality Assurance & Testing</td>
+											<td>B+</td>
+										</tr>
+										<tr>
+											<td>Network Fundamentals</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Advanced Database Technologies</td>
+											<td>C+</td>
+										</tr>
+										<tr>
+											<td>Discrete Maths 2</td>
+											<td>B+</td>
+										</tr>
+										<tr>
+											<td>Client Side Web Development</td>
+											<td>B+</td>
+										</tr>
+										<tr>
+											<td>IT Scripting & Automation</td>
+											<td>A</td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header">
+								  <a class="btn" data-bs-toggle="collapse" href="#YrOne">
+									Year 1 2019-2020
+								  </a>
+								</div>
+								<div id="YrOne" class="collapse show" data-bs-parent="#accordion">
+									<div class="card-body">
+										<table class="table">
+										<tr>
+											<th class="text-black">Module</th>
+											<th class="text-black">Results</th>
+										</tr>
+										<tbody>
+										<tr>
+											<td>Software Development 2</td>
+											<td>C</td>
+										</tr>
+										<tr>
+											<td>Systems Analysis</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Social Media Communications</td>
+											<td>A</td>
+										</tr>
+										<tr>
+											<td>Statistiscs</td>
+											<td>A</td>
+										</tr>
+										<tr>
+											<td>Database Fundamentals</td>
+											<td>A</td>
+										</tr>
+										<tr>
+											<td>Operating Systems Fundamentals</td>
+											<td>B+</td>
+										</tr>
+										<tr>
+											<td>Software Development</td>
+											<td>B+</td>
+										</tr>
+										<tr>
+											<td>Computer Architecture</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Visual Design & User Experience</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Buisnesss & Information Systems</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Discrete Maths 1</td>
+											<td>B</td>
+										</tr>
+										<tr>
+											<td>Critical Skills Development</td>
+											<td>A</td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br>
+			<br>
+
+			<section id="experience" class="topics">
+				<h1>Experience</h1>
+				<h3>Projects & Work</h3>
+				<div class="row text-center text-black">
+					<p>Throughout the last few years there have been many times where I wa sable to work in depth on certain topics with aim of using 
+						skills that I have gathered in conjunction with each other with the sole purpose of accomplishing a goal. 
+					</p>
+					<br><br>
+					<p>
+						The most interseting of the previously mentioned topics were projects and the workk placement, the projects which took place in my 
+						2nd and 4th year were/are semester long goals one that I am currently working on by myself (4th year) and the other that I worked on alongside
+						others. The work placement took place over 6 months, around Febrary-August 2022, where I worked on a project with the aim of creating an app for 
+						the HSE.
+					</p>
+				</div>
+				<br><br>
+				<div class="row mp-3 p-3 mx-auto">
+					<div class="col-sm-3 mx-auto">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<h4>Project Year 2</h4>
+									<img src="images/work.jpg" alt="Avatar" style="width:300px;height:300px;">
+								</div>
+								<div class="flip-card-back">
+									<h3>Year 2</h3> 
+									<p>Built a website useing HTML, Javascript, css and Firestore alonside two other team members</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 mx-auto">
+						<div class="flip-card">										
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<h4>Work Placement</h4>
+									<img src="images/work.jpg" alt="Avatar" style="width:300px;height:300px;">
+								</div>
+								<div class="flip-card-back">
+									<h3>Work Placement</h3> 
+									<p>Spent 6 months working on project team within the IIS division of eHealth Technologies, the IT division
+										of the HSE, miain wor was app development using Power Apps, Power BI and Azure devops.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 mx-auto">
+						<div class="flip-card">										
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<h4>Project Year 4</h4>
+									<img src="images/work.jpg" alt="Avatar" style="width:300px;height:300px;">
+								</div>
+								<div class="flip-card-back">
+									<h3>Project Year 4</h3> 
+									<p>Using data attempt to predict the number of patients that an amergency department could take in over a week</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<br>
+			<br>
+
+			<!-- Contact Us page -->
+			<section id="contact" class="topics">
+				<h1>Contact Me</h1>
+				<p>I would love to hear from you. Use the contact details below to get in touch with me..</p>
+				<p>Phone Number: 000 1111111</p>
+				<p>email: ColinRobinson@fakeemail.com</p>
+				<a href="https://www.linkedin.com/in/colin-robinson-66b517150/">LinkedIn</a>
+				<br>
+				<br>
+				<p>I will get back to you as soon as I can</p><br>
+		  
+			</section> 
+    
+		</main>
+
+	</div> <!-- End of div data-spy="scroll" -->
+
+	<footer>
+        <b>Site Created by Colin Robinson 2022</b>
+    </footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+	<!-- My JavaScript file -->
+	<script src="scripts/myScripts.js"></script>  
+</body>
+</html>

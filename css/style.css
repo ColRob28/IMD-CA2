@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #000000; /* Text colour */
+  background-color: white;
+}
+
+.topics {
+  padding-top: 4rem;
+  margin: 2rem;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: yellow;
+  align-items: baseline;
+}
+
+#aboutUsAwards img {
+  transition: transform 0.7s ease-in-out;
+}
+
+#homeName,
+th {
+  color: #c8d600;
+  font-weight: bold;
+  /*Primary color: #0275d8 this is what the Bootstrap primary colour is*/
+}
+
+table thead {
+  background-color: black;
+}
+table th {
+  color: white;
+  text-align: left;
+}
+table td {
+  text-align: left;
+}
+
+/*Gotten From W3 Schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(94, 93, 41);
+}
+
+.flip-card-front h4{
+  color: #2980b9;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+/*My additions*/
+
+h1{
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgb(190, 171, 0);
+}
+
+h2,h3,h5,h6{
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgb(94, 93, 41);
+}
+
+h5 {
+  color: black;
+}
+
+#modalTitle {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+a {
+  font-weight: 700;
+  transition: all 0.4s ease;
+}
+
+img {
+  width: 100%;
+}
+
+small {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.logo-text {
+  font-size:22px;
+  text-transform: uppercase;
+  color: #c8d600;
+}
+
+#home{
+  background: linear-gradient(rgba(74, 90, 17, 0.8),rgba(74, 90, 17, 0.8)), url(../images/Back.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+#home h1 {
+  font-weight: 700;
+}
+
+#home h4 {
+  font-weight: 700;
+  margin: 18px auto;
+  color: #c8d600;
+}
+
+#home p {
+  max-width: 550px;
+  margin: 18px auto;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 0;
+}
+
+.btn-brand {
+  background-color: #c8d600;
+  color: white;
+}
